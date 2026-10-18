@@ -68,7 +68,7 @@ public class Main {
         System.out.println("==========================================");
     }
 
-    // Reads a number. If the user types letters, it asks again.
+    
     static int readNumber(String message) {
         while (true) {
             System.out.print(message);
@@ -150,7 +150,7 @@ public class Main {
         if (isEmpty()) return;
         int id = readNumber("Enter ID to search: ");
 
-        // filter keeps matching students, findFirst takes the first one
+    
         Student found = students.stream()
                 .filter(s -> s.getId() == id)
                 .findFirst()
@@ -163,7 +163,7 @@ public class Main {
         }
     }
 
-    // ---------- Task 2 ----------
+    
 
     static void showPassing() {
         if (isEmpty()) return;
@@ -331,7 +331,6 @@ public class Main {
         for (Student s : eligible) {
             originalAverages.put(s.getId(), s.getAverage());
 
-            // Add 10 to each course, but not more than 100
             for (String course : s.getCourses().keySet()) {
                 double newMark = s.getCourses().get(course) + 10;
                 if (newMark > 100) {
