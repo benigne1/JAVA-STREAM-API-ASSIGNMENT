@@ -31,7 +31,7 @@ public class Student {
     public void setSkills(List<String> skills) { this.skills = skills; }
 
     public double getAverage() {
-        double total = 0;
+        double total =  0;
         for (double mark : courses.values()) {
             total = total + mark;
         }
